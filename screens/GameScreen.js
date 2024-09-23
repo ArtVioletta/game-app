@@ -5,7 +5,7 @@ import PrimaryButton from '../components/ui/PrimaryButton';
 import Title from '../components/ui/Title';
 import Card from '../components/ui/Card';
 import InstructionText from '../components/ui/InstructionText';
-
+import Entypo from '@expo/vector-icons/Entypo';
 function generateRandomBetween(min, max, userNumber) {
   const rndNum = Math.floor(Math.random() * (max - min)) + min;
 
@@ -68,12 +68,12 @@ function GameScreen({ userNumber, onGameOver }) {
         <View style={styles.buttonsContainer}>
           <View style={styles.buttonContainer}>
             <PrimaryButton onPress={nextGuessHandler.bind(this, 'lower')}>
-              -
+              <Entypo name="minus" size={24} color="white" />
             </PrimaryButton>
           </View>
           <View style={styles.buttonContainer}>
             <PrimaryButton onPress={nextGuessHandler.bind(this, 'greater')}>
-              +
+              <Entypo name="plus" size={24} color="white" />
             </PrimaryButton>
           </View>
         </View>
