@@ -7,7 +7,7 @@ function GameOverScreen({ roundsNumber, userNumber, onStartNewGame }) {
   return (
     <View style={styles.rootContainer}>
       <Title>GAME OVER!</Title>
-      <View style={styles.ImageContainer}>
+      <View style={styles.imageContainer}>
         <Image
           style={styles.image}
           source={require('../assets/images/success.png')}
@@ -18,7 +18,7 @@ function GameOverScreen({ roundsNumber, userNumber, onStartNewGame }) {
         rounds to guess the number{' '}
         <Text style={styles.highlight}>{userNumber}</Text>.
       </Text>
-      <PrimaryButton>Start New Game</PrimaryButton>
+      <PrimaryButton onPress={onStartNewGame}>Start New Game</PrimaryButton>
     </View>
   );
 }
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  ImageContainer: {
+  imageContainer: {
     width: 300,
     height: 300,
     borderRadius: 150,

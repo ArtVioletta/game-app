@@ -5,7 +5,7 @@ function GuessLogItem({ roundNumber, guess }) {
   return (
     <View style={styles.listItem}>
       <Text style={styles.itemText}>#{roundNumber}</Text>
-      <Text>Opponent's Guess: {guess}</Text>
+      <Text style={styles.itemText}>Opponent's Guess: {guess}</Text>
     </View>
   );
 }
