@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Alert,
   useWindowDimensions,
+  KeyboardAvoidingView,
 } from 'react-native';
 import PrimaryButton from '../components/ui/PrimaryButton';
 import { useState } from 'react';
@@ -42,6 +43,7 @@ function StartGameScreen({ onPickNumber }) {
   const marginTop = height < 380 ? 30 : 100;
 
   return (
+    <KeyboardAvoidingView style={styles.screen} behavior='position'>
     <View style={[styles.rootContainer, {marginTop: marginTop}]}>
       <Title> Guess My Number </Title>
       <Card>
@@ -67,6 +69,7 @@ function StartGameScreen({ onPickNumber }) {
         </View>
       </Card>
     </View>
+    </KeyboardAvoidingView>
   );
 }
 
