@@ -7,6 +7,7 @@ import Colors from './constants/colors';
 import GameOverScreen from './screens/GameOverScreen';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
+import { StatusBar } from 'expo-status-bar';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -50,12 +51,7 @@ export default function App() {
     return null;
   }
 
-  let screen = (
-    <StartGameScreen
-      onPickNumber={pickedNumberHandler}
-      // onGameOver={gameOverHandler}
-    />
-  );
+  let screen = <StartGameScreen onPickNumber={pickedNumberHandler} />;
 
   if (userNumber) {
     screen = (
@@ -88,6 +84,7 @@ export default function App() {
           {screen}
         </SafeAreaView>
       </ImageBackground>
+      <StatusBar style="light" />
     </LinearGradient>
   );
 }
